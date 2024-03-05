@@ -53,6 +53,7 @@ if(isset($_POST["btn"])) {
             $picThreePath = $targetDir . $filename . "(2).".$extension;
 
             }
+            //checking
              else if (basename($_FILES["pic-one"]["name"])==basename($_FILES["pic-two"]["name"])) {
                 $extension = pathinfo(basename($_FILES["pic-two"]["name"]), PATHINFO_EXTENSION);
                 $filename = pathinfo(basename($_FILES["pic-two"]["name"]), PATHINFO_FILENAME);
