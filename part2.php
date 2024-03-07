@@ -205,8 +205,7 @@ include "./connect.php";
         });
 
         document.getElementById("cut").addEventListener("click",()=>{
-            document.getElementById("popup").style.display = "none";
-            
+            document.getElementById("popup").style.display = "none";    
         })
 </script>
 

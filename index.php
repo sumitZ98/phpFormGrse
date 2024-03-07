@@ -11,11 +11,6 @@ if(isset($_POST["btn"])){
     $name = $_POST["Name"];
     $aadhar = $_POST["Aadhar"];
     $number = $_POST["Phone"];
-    if(isset($_COOKIE[$name])){
-        setcookie("Name", $name, time() - 3600, "/");
-        setcookie("Aadhar", $aadhar, time() - 3600, "/");
-        setcookie("Phone", $number, time() - 3600, "/");
-    }
     setcookie("Name", $name, time() + (86400), "/"); // 86400 = 1 day
     setcookie("Aadhar", $aadhar, time() + (86400), "/");
     setcookie("Phone", $number, time() + (86400), "/");
@@ -27,13 +22,13 @@ if(isset($_POST["btn"])){
 ?>
 <form method ="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <label>Enter Name:</label>
-    <input type="text" name="Name">
+    <input type="text" name="Name" required>
     <br>
     <label>Enter Aadhar card:</label>
-    <input type="number" name="Aadhar">
+    <input type="number" name="Aadhar" required>
     <br>
     <label>Enter Phone number:</label>
-    <input type="number" name="Phone">
+    <input type="tel" name="Phone" required>
     <button name="btn" type="submit">Submit</button>
 </form>
 </body>
