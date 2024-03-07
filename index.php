@@ -11,6 +11,11 @@ if(isset($_POST["btn"])){
     $name = $_POST["Name"];
     $aadhar = $_POST["Aadhar"];
     $number = $_POST["Phone"];
+    if(isset($_COOKIE[$name])){
+        setcookie("Name", $name, time() - 3600, "/");
+        setcookie("Aadhar", $aadhar, time() - 3600, "/");
+        setcookie("Phone", $number, time() - 3600, "/");
+    }
     setcookie("Name", $name, time() + (86400), "/"); // 86400 = 1 day
     setcookie("Aadhar", $aadhar, time() + (86400), "/");
     setcookie("Phone", $number, time() + (86400), "/");
