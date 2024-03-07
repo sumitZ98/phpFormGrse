@@ -23,7 +23,7 @@ include "./connect.php";
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #f44336;
+    background:lightblue;
     color: white;
     padding: 15px 20px;
     border-radius: 5px;
