@@ -175,7 +175,6 @@ include "./connect.php";
             if (file) {
                 var fileType = file.type;
                 if (!fileType.startsWith('image/')) {
-                    // alert('Please select an image file.');
                     document.getElementById("popup").style.display = "block";
                     this.value = ''; // Clear the input field
                 }
@@ -187,8 +186,8 @@ include "./connect.php";
             if (file) {
                 var fileType = file.type;
                 if (!fileType.startsWith('image/')) {
-                    alert('Please select an image file.');
-                    this.value = ''; // Clear the input field
+                    document.getElementById("popup").style.display = "block";
+                    this.value = ''; 
                 }
             }
         });
@@ -199,8 +198,8 @@ include "./connect.php";
                 var fileType = file.type;
                 console.log(fileType);
                 if (!fileType.startsWith('image/')) {
-                    alert('Please select an image file.');
-                    this.value = ''; // Clear the input field
+                    document.getElementById("popup").style.display = "block";
+                    this.value = ''; 
                 }
             }
         });
